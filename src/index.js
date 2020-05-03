@@ -1,7 +1,19 @@
-import { saludar } from './js/componentes.js';
 import './styles.css';
 
+import { Todo,TodoList } from './classes/index';
+import { crearTodoHtml,todoCounter } from './js/componentes';
 
-const nombre = 'Fernando';
+export const todoList = new TodoList();
 
-saludar( nombre );
+/* const tarea = new Todo('Aprender Javascript');
+tarea.completado = false;
+
+todoList.nuevoTodo(tarea)
+
+crearTodoHtml(todo);
+ */
+
+console.log(todoList.todos);
+
+todoList.todos.forEach(todo => crearTodoHtml(todo));
+todoCounter();
